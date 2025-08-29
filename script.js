@@ -14,8 +14,11 @@ document.querySelectorAll('.heart').forEach(function(heart) {
 
 document.querySelectorAll('.copy').forEach(function(copy) {
     copy.addEventListener('click', function () {
+        let x = this.parentElement.parentElement;
+        let num = x.querySelector('p.font-bold.text-3xl').innerText;
         ++copies;
         document.getElementById('copyCount').innerText = copies;
+        navigator.clipboard.writeText(num);
         alert('Copied to clipboard!');
     });
 });
