@@ -50,9 +50,9 @@
         </section>
 
         <!-- main section -->
-        <section class="bg-[#F5FFF6] flex justify-between">
+        <section class="bg-[#F5FFF6] flex flex-col min-[1102px]:flex-row gap-8 justify-between py-12">
             <!-- cards -->
-            <div class="grid grid-cols-3 gap-8 m-15">
+            <div class="grid grid-cols-1 min-[600px]:grid-cols-2 min-[1525px]:grid-cols-3 gap-8">
                 <!-- National Emergency Number -->
                 <div class="bg-white p-8 rounded-2xl drop-shadow-md">
                     <div class="flex justify-between items-center">
@@ -218,8 +218,26 @@
             </div>
 
             <!-- Call History -->
-            <div class="bg-white m-15">
-                log
+            <div class="bg-white drop-shadow-md rounded-2xl p-8 flex-1">
+                <!-- top -->
+                <div class="flex justify-between items-center text-nowrap">
+                    <div><i class="fa-solid fa-clock font bg"></i>
+                    <span class="font-medium text-nowrap">Call History</span></div>
+                    
+                    <button class="bg-[#00A63E] px-6 py-2 rounded-full text-white">Clear</button>
+                </div>
+                
+                <!-- cards generated here -->
+                <!-- card -->
+                <div class="bg-[#FAFAFA] flex justify-between items-center rounded-[8px] p-4 my-4">
+                    <div>
+                        <p class="font-medium">Fire Service Number</p>
+                        <p>999</p>
+                    </div>
+                    <div>
+                        <p>11:36:58 AM</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
