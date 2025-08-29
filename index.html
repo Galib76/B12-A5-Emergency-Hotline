@@ -29,12 +29,12 @@
                 
                 <!-- coin -->
                 <div class="flex gap-2.5 justify-center items-center p-3 bg-[#41ff6b1a] rounded-[50px] min-w-30">
-                    <span id="coinCount"></span>
+                    <span id="coinCount" class="font-medium"></span>
                     <img src="assets/coin.png" alt="heart" width="24">
                 </div>
                 
                 <!-- copy -->
-                <p class="bg-[#00A63E] rounded-[50px] px-9 py-3 text-white text-nowrap"><span id="copyCount"></span> Copy</p>
+                <p class="bg-[#00A63E] rounded-[50px] px-9 py-3 text-white text-nowrap font-medium"><span id="copyCount"></span> Copy</p>
             </div>
         </div>
     </header>
@@ -216,27 +216,18 @@
             </div>
 
             <!-- Call History -->
-            <div class="bg-white drop-shadow-md rounded-2xl p-8 flex-1 order-first min-[1102px]:order-last">
+            <div id="gen" class="bg-white drop-shadow-md rounded-2xl p-8 flex-1 order-first min-[1102px]:order-last">
                 <!-- top -->
                 <div class="flex justify-between items-center text-nowrap">
                     <div><i class="fa-solid fa-clock font bg"></i>
                     <span class="font-medium text-nowrap">Call History</span></div>
                     
-                    <button class="bg-[#00A63E] px-6 py-2 rounded-full text-white btn font-normal">Clear</button>
+                    <button id="clear" class="bg-[#00A63E] px-6 py-2 rounded-full text-white btn font-normal">Clear</button>
                     
                 </div>
                 
                 <!-- cards generated here -->
                 <!-- card -->
-                <div class="bg-[#FAFAFA] flex justify-between items-center rounded-[8px] p-4 my-4">
-                    <div>
-                        <p class="font-medium">Fire Service Number</p>
-                        <p>999</p>
-                    </div>
-                    <div>
-                        <p>11:36:58 AM</p>
-                    </div>
-                </div>
             </div>
         </section>
     </main>

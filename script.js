@@ -16,6 +16,7 @@ document.querySelectorAll('.copy').forEach(function(copy) {
     copy.addEventListener('click', function () {
         ++copies;
         document.getElementById('copyCount').innerText = copies;
+        alert('Copied to clipboard!');
     });
 });
 
@@ -24,9 +25,29 @@ document.querySelectorAll('.call').forEach(function(call) {
         if (coins >= 20) {
             coins -= 20;
             document.getElementById('coinCount').innerText = coins;
+            let x = this.parentElement.parentElement;
+
+            //create
+            let y = `
+                <div class="bg-[#FAFAFA] flex justify-between items-center rounded-[8px] p-4 my-4">
+                    <div>
+                        <p class="font-medium">${x.querySelector('h3').innerText}</p>
+                        <p>${x.querySelector('p.font-bold.text-3xl').innerText}</p>
+                    </div>
+                    <div>
+                        <p>${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</p>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('gen').innerHTML += y;
         } else {
             alert('You do not have enough coins!');
         }
     });
 });
 
+document.body.addEventListener('click', function(e) {
+    while (e.target.parentElement.nextElementSibling)
+        e.target.parentElement.nextElementSibling.remove();
+});
