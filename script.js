@@ -26,7 +26,9 @@ document.querySelectorAll('.call').forEach(function(call) {
             coins -= 20;
             document.getElementById('coinCount').innerText = coins;
             let x = this.parentElement.parentElement;
-
+            let service = x.querySelector('h3').innerText;
+            let num = x.querySelector('p.font-bold.text-3xl').innerText;
+            alert('Calling: ' + num + '\n' + service); 
             //create
             let y = `
                 <div class="bg-[#FAFAFA] flex justify-between items-center rounded-[8px] p-4 my-4">
