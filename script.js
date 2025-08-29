@@ -48,6 +48,7 @@ document.querySelectorAll('.call').forEach(function(call) {
 });
 
 document.body.addEventListener('click', function(e) {
-    while (e.target.parentElement.nextElementSibling)
-        e.target.parentElement.nextElementSibling.remove();
+    if (e.target.id === 'clear')
+        while (e.target.parentElement.nextElementSibling)
+            e.target.parentElement.nextElementSibling.remove();
 });
