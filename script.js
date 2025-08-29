@@ -1,6 +1,6 @@
 let heartClicked = 0;
 document.getElementById('heartCount').innerText = heartClicked;
-let coins = 1000;
+let coins = 100;
 document.getElementById('coinCount').innerText = coins;
 let copies = 0;
 document.getElementById('copyCount').innerText = copies;
