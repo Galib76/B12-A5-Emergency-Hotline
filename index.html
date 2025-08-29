@@ -9,8 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
 </head>
 
 <body class="min-h-screen flex flex-col">
@@ -25,18 +23,18 @@
             <div class="flex flex-wrap min-[695px]:flex-nowrap justify-center gap-5">
                 <!-- heart -->
                 <div class="flex gap-2.5 justify-center items-center p-3 bg-[#41ff6b1a] rounded-[50px] min-w-30">
-                    <span>0</span>
+                    <span id="heartCount" class="font-medium"></span>
                     <img src="assets/heart.png" alt="heart" width="30">
                 </div>
                 
                 <!-- coin -->
                 <div class="flex gap-2.5 justify-center items-center p-3 bg-[#41ff6b1a] rounded-[50px] min-w-30">
-                    <span>100</span>
+                    <span id="coinCount"></span>
                     <img src="assets/coin.png" alt="heart" width="24">
                 </div>
                 
                 <!-- copy -->
-                <p class="bg-[#00A63E] rounded-[50px] px-9 py-3 text-white text-nowrap"><span>0</span> Copy</p>
+                <p class="bg-[#00A63E] rounded-[50px] px-9 py-3 text-white text-nowrap"><span id="copyCount"></span> Copy</p>
             </div>
         </div>
     </header>
@@ -59,7 +57,7 @@
                         <div class="rounded-2xl bg-[#FFE3E2] p-4">
                             <img src="assets/emergency.png" alt="emergency" class="w-8">
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
 
                     <div class="mt-4">
@@ -73,10 +71,10 @@
 
                     <!-- buttons -->
                     <div class="flex mt-6 gap-2 justify-between">
-                        <button class="btn flex-1 bg-white font-normal">
+                        <button class="btn flex-1 bg-white font-normal copy">
                             <i class="fa-regular fa-copy"></i>Copy
                         </button>
-                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal call"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
 
@@ -87,7 +85,7 @@
                         <div class="rounded-2xl bg-[#DFEFFF] p-4">
                             <img src="assets/police.png" alt="emergency" class="w-8">
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
 
                     <div class="mt-4">
@@ -101,10 +99,10 @@
 
                     <!-- buttons -->
                     <div class="flex mt-6 gap-2 justify-between">
-                        <button class="btn flex-1 bg-white font-normal">
+                        <button class="btn flex-1 bg-white font-normal copy">
                             <i class="fa-regular fa-copy"></i>Copy
                         </button>
-                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal call"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
 
@@ -114,7 +112,7 @@
                         <div class="rounded-2xl bg-[#FFE3E2] p-4">
                             <img src="assets/fire-service.png" alt="emergency" class="w-8">
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
 
                     <div class="mt-4">
@@ -128,10 +126,10 @@
 
                     <!-- buttons -->
                     <div class="flex mt-6 gap-2 justify-between">
-                        <button class="btn flex-1 bg-white font-normal">
+                        <button class="btn flex-1 bg-white font-normal copy">
                             <i class="fa-regular fa-copy"></i>Copy
                         </button>
-                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal call"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
 
@@ -141,7 +139,7 @@
                         <div class="rounded-2xl bg-[#FFE3E2] p-4">
                             <img src="assets/ambulance.png" alt="emergency" class="w-8">
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
 
                     <div class="mt-4">
@@ -155,10 +153,10 @@
 
                     <!-- buttons -->
                     <div class="flex mt-6 gap-2 justify-between">
-                        <button class="btn flex-1 bg-white font-normal">
+                        <button class="btn flex-1 bg-white font-normal copy">
                             <i class="fa-regular fa-copy"></i>Copy
                         </button>
-                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal call"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
 
@@ -168,7 +166,7 @@
                         <div class="rounded-2xl bg-[#FFE3E2] p-4">
                             <img src="assets/emergency.png" alt="emergency" class="w-8">
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
 
                     <div class="mt-4">
@@ -182,10 +180,10 @@
 
                     <!-- buttons -->
                     <div class="flex mt-6 gap-2 justify-between">
-                        <button class="btn flex-1 bg-white font-normal">
+                        <button class="btn flex-1 bg-white font-normal copy">
                             <i class="fa-regular fa-copy"></i>Copy
                         </button>
-                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal call"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
 
@@ -195,7 +193,7 @@
                         <div class="rounded-2xl bg-[#FFE3E2] p-4">
                             <img src="assets/emergency.png" alt="emergency" class="w-8">
                         </div>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart"></i>
                     </div>
 
                     <div class="mt-4">
@@ -209,10 +207,10 @@
 
                     <!-- buttons -->
                     <div class="flex mt-6 gap-2 justify-between">
-                        <button class="btn flex-1 bg-white font-normal">
+                        <button class="btn flex-1 bg-white font-normal copy">
                             <i class="fa-regular fa-copy"></i>Copy
                         </button>
-                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn flex-1 bg-[#00A63E] text-white font-normal call"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </div>
